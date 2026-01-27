@@ -31,7 +31,10 @@ I wrote some documentation and informed myself on a surface level.
 I made the work packages and probably completely whiffed on time estimations
 
 ### 22.01.26
-Today I didnt have much time, so I just read some more about how APIs function and what i will need to make this work
+Today I didn't have much time, so I just read some more about how APIs function and what I will need to make this work
 
 ### 23.01.26
 I set up the project using Spring Initializr and installed IntelliJ IDEA, since I had already used PHPStorm and was a little more familiar with it than with Eclipse.
+
+### 27.01.26
+Today I searched for some Guides on the Internet and gathered more information. I followed a Tutorial to start getting set up with the first API calls. I had to disable the automatic DB connection for the program to run, since I don't yet have a DB. I added a List with a few Jokes, which can be accessed via the /joke?id=x URL.
