@@ -38,3 +38,7 @@ I set up the project using Spring Initializr and installed IntelliJ IDEA, since 
 
 ### 27.01.26
 Today I searched for some Guides on the Internet and gathered more information. I followed a Tutorial to start getting set up with the first API calls. I had to disable the automatic DB connection for the program to run, since I don't yet have a DB. I added a List with a few Jokes, which can be accessed via the /joke?id=x URL.
+
+### 28.01.26
+Today I set up PostgreSQL on my system. I did this using [this Arch wiki article](https://wiki.archlinux.org/title/PostgreSQL) to guide me through it. I created a user and a database.
+Then I created the `joke` and `category` tables, and inserted a few jokes into them, so that I have data for testing.
