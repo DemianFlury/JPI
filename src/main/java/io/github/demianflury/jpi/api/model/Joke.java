@@ -3,13 +3,13 @@ package io.github.demianflury.jpi.api.model;
 public class Joke {
     private int id;
     private int category;
-    private String text;
+    private String joketext;
 
     // Constructors
     public Joke(int id, int category, String text){
         this.id = id;
         this.category = category;
-        this.text = text;
+        this.joketext = text;
     }
 
 
@@ -21,7 +21,7 @@ public class Joke {
         return category;
     }
     public String getText(){
-        return text;
+        return joketext;
     }
 
     // Setters
@@ -29,6 +29,6 @@ public class Joke {
         this.category = category;
     }
     public void setText(String text){
-        this.text = text;
+        this.joketext = text;
     }
 }

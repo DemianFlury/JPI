@@ -16,8 +16,13 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @GetMapping("/joke")
-    public Joke getJoke(@RequestParam int id){
-        return jokeService.getJoke(id);
+    // Get joke by ID
+    @GetMapping("/joke?id=")
+    public Joke getJokeById(@RequestParam int id){
+        return jokeService.getJokeById(id);
     }
+
+    // Get random joke
+
+    // Get joke by category
 }
