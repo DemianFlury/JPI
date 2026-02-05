@@ -3,11 +3,13 @@ package io.github.demianflury.jpi.api.controller;
 import io.github.demianflury.jpi.api.model.Joke;
 import io.github.demianflury.jpi.service.JokeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
+@RequestMapping("/joke")
 public class JokeController {
 
     @Autowired
@@ -16,13 +18,27 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
+    private ResponseEntity<Joke> checkOptional(Optional<Joke> result){
+        if(result.isEmpty()){
+
+            return ResponseEntity.notFound().build();
+        }
+        else{
+            return ResponseEntity.ok(result.get());
+        }
+    }
     // Get joke by ID
-    @GetMapping("/joke?id=")
-    public Joke getJokeById(@RequestParam int id){
-        return jokeService.getJokeById(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<Joke> findById(@PathVariable int id){
+        Optional<Joke> result = jokeService.getById(id);
+        return checkOptional(result);
     }
 
     // Get random joke
-
+    @GetMapping
+    public ResponseEntity<Joke> findRandom(){
+        Optional<Joke> result = jokeService.getRandom();
+        return checkOptional(result);
+    }
     // Get joke by category
 }
