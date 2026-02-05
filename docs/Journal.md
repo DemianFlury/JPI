@@ -42,3 +42,10 @@ Today I searched for some Guides on the Internet and gathered more information. 
 ### 28.01.26
 Today I set up PostgreSQL on my system. I did this using [this Arch wiki article](https://wiki.archlinux.org/title/PostgreSQL) to guide me through it. I created a user and a database.
 Then I created the `joke` and `category` tables, and inserted a few jokes into them, so that I have data for testing.
+
+### 05.02.26
+I haven't been as active on this project as I would have liked to be. I had private matters to attend to, but undoubtedly was also struggling with motivation. I have now returned and with some help of Claude figured out how to get the API back on its feet.
+
+Now the database is fully connected and working. Mainly I discovered that I need a repository next to the classic MVC architecture. This is also where to define custom queries to the database.
+
+Additionally, I've changed the mapping, to no longer use classic GET-parameters but instead send it directly as part of the url, which looks much cleaner.

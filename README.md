@@ -16,7 +16,12 @@ The API can tell you a random Joke depending on a category you choose. You shoul
 ## Endpoints
 
 ### GET 
-`GET`
+`/joke` gets random joke
+
+`/joke/{id}` gets specific joke by id
+
+`/joke/cat/{id}` gets random joke of category
+
 ### POST
 `POST`
 ### PUT 
